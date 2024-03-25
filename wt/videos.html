@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Files</title>
+    <style>
+        /* Basic styling for demonstration purposes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10;
+            padding: 10;
+        }
+.navigation a:link{
+  color: white;
+    padding: 10px;
+    margin: 10px;
+      border-radius: 15px;
+
+}
+.navigation a:visited{
+   color: white;
+     padding: 10px;
+     margin: 10px;
+       border-radius: 15px;
+}
+.navigation a:hover{
+    color: white;
+     padding: 10px;
+     margin: 10px;
+     border-radius: 15px;
+}
+ .navigation a:active{
+    color: white;
+     padding: 10px;
+     margin: 10px;
+       border-radius: 15px;
+}
+        .container {
+            display: flex;
+            align-items: flex-start;
+        }
+        .video-content {
+            flex: 1;
+            margin-right: 20px;
+            margin-left: 5px;
+        }
+        .video {
+            width: 100%;
+            height: 390px; /* Adjust height as needed */
+        }
+        .video-desc {
+            margin-top: 20px;
+        }
+        .new_video {
+            flex: 0 0 200px;
+        }
+        .new_video {
+            margin-bottom: 10px;
+        }
+        .new_video video {
+            width: 100%;
+            height:auto;
+        
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: black;
+            border-bottom: 5px solid deeppink;
+        }
+        .logo {
+            width: 60px; /* Adjust logo size */
+            height: auto;
+        }
+        .navigation {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align:none;
+            flex-grow: 2; 
+        }
+        .navigation li {
+            display: inline-block;
+            margin-right: 20px;
+            padding: 10px;
+        }
+        .navigation li:last-child {
+            margin-right: 0;
+        }
+        .navigation li a {
+            text-decoration: none;
+            color: #333;
+        }
+    
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+<div class="header">
+    <img src="./image/barca.jpg" width="100" height="35" alt="Logo">
+    <ul class="navigation">
+      <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                <a href="#">Parameter</a>
+                <div class="dropdown-contents">
+                    <!-- Links inside the dropdown menu -->
+                    <a href="audios.html">Audio</a>
+                    <a href="videos.html">Video</a>
+                </div>
+            </li>
+
+    </ul>
+</div>
+
+<div class="container">
+    <div class="video-content">
+    <video width="600" height="420" controls class="video">
+    <!-- Main Video Player -->
+    <source src="./musics/Ni_Forever_(Music_Video).mp4" type="video/mp4"></video>
+        <!-- Video Description -->
+        <div class="video-desc">
+            <h2>The_Ben_Ni_Forever_(Music_Video)</h2>
+            <br>
+        <button onclick="previousVideo()">Previous</button>
+        <button onclick="togglePlayPause()">Play/Pause</button>
+        <button onclick="nextVideo()">Next</button><br><br>
+         
+           <a href="#comments">&#128172; Comments</a> 
+            <a href="#like">&#128077; Like</a> 
+            <a href="#dislike">&#128078; Dislike</a> 
+            <a href="#subscribers">&#128100; Subscribes</a></h3>
+        </div>
+    </div>
+    
+    <!-- new video pending to be played-->
+    <div class="new_video">
+        <h2><i>Recommended Videos</i></h2>
+        <div class="new_video">
+        <video width="400" height="220" controls class="video">
+    <!-- Main Video Player -->
+     <source src="./musics/One-Music Video-.mp4" type="video/mp4" type="video/mp4"></video>
+     <p>Iyanya- Mayorkun - Tekno - One Side -Remix- -Official Music Video</p></div>
+        <div class="new_video">
+         <video width="400" height="220" controls class="video">
+        <source src="./musics/Its Owkeeyy.-OFFICIAL VIDEO-2024.mp4" type="video/mp4">
+        </video> <p>Uncle Austin - Its Owkeeyy.-OFFICIAL VIDEO-2024</p>  
+        </div>
+        <div class="new_video">
+         <video width="400" height="220" controls class="video">
+        <source src="./musics/Closer-Official Video-.mp4" type="video/mp4">
+        </video> <p>Closer - Uncle Austin- Meddy - Yvan Buravan -Official Video</p>  
+        </div>
+        
+    </div>
+</div>
+<div><footer style="background-color:violet;text-align: center;width:100%;height:auto; color: white;font-size: 20px;"><p>UR CBE B BIT &copy; 2024 &reg; This website displays videos</p></footer></div>
+<script>
+    var videos = [
+        "./musics/Ni_Forever_(Music_Video).mp4",
+        "./musics/One-Music Video-.mp4",
+        "./musics/Its Owkeeyy.-OFFICIAL VIDEO-2024.mp4",
+        "./musics/I'm_The_One_(video).mp4",
+        "./musics/Closer-Official Video-.mp4"];
+    
+    var currentVideoIndex = 0;
+    var videoPlayer = document.querySelector('video');
+
+    function togglePlayPause() {
+        if (videoPlayer.paused) {
+            videoPlayer.play();
+        } else {
+            videoPlayer.pause();
+        }
+    }
+
+    function nextVideo() {
+        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+        videoPlayer.src = videos[currentVideoIndex];
+        videoPlayer.play();
+    }
+
+    function previousVideo() {
+        currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+        videoPlayer.src = videos[currentVideoIndex];
+        videoPlayer.play();
+    }
+</script>
+
+</body>
+</html>

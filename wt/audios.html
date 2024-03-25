@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Files</title>
+    <style>
+        /* Basic styling for demonstration purposes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10;
+            padding: 10;
+        }
+.navigation a:link{
+    color:white;
+    padding: 10px;
+    margin: 10px;
+      border-radius: 15px;
+
+}
+.navigation a:visited{
+    color:white;
+     padding: 10px;
+     margin: 10px;
+       border-radius: 15px;
+}
+.navigation a:hover{
+    bcolor:white;
+     padding: 10px;
+     margin: 10px;
+     border-radius: 15px;
+}
+ .navigation a:active{
+    color:white;
+     padding: 10px;
+     margin: 10px;
+       border-radius: 15px;
+}
+        .container {
+            display: flex;
+            align-items: flex-start;
+        }
+    
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: black;
+            border-bottom: 1px solid red;
+        }
+        .logo {
+            width: 60px; /* Adjust logo size */
+            height: auto;
+        }
+        .navigation {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align:none;
+            flex-grow: 2; 
+        }
+        .navigation li {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px;
+        }
+        .navigation li:last-child {
+            margin-right: 0;
+        }
+        .navigation li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .p1{
+            font-family: Elephant;
+            font-weight: bold;
+            font-size: 20px;
+        }
+       
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+<div class="header">
+     <img src="./image/logo.jpg" width="100" height="35" alt="Logo">
+    <ul class="navigation">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                <a href="#">Parameter</a>
+                <div class="dropdown-contents">
+                    <!-- Links inside the dropdown menu -->
+                    <a href="audios.html">Audio</a>
+                    <a href="videos.html">Video</a>
+
+        
+        
+    </div>
+</li>
+    </ul>
+</div>
+ <div>  <section>
+            <audio controls>
+                <source src="./musics/Agatunda (Music_Audio).mp3" type="audio/mpeg">
+                Your browser does not support the audio element
+            </audio>
+            <p>Agatunda by Afrique (Music Audio)</p>
+            <br>
+            <button onclick="previousAudio()">Previous</button>
+            <button onclick="togglePlayPause()">Play/Pause</button>
+            <button onclick="nextAudio()">Next</button>
+            <div>
+                <a href="#comments">&#128172; Comments</a>
+                <a href="#like">&#128077; Like</a>
+                <a href="#dislike">&#128078; Dislike</a>
+                <a href="#subscribers">&#128100; Subscribers</a>
+            </div>
+
+            </section>
+
+            <section>
+            <audio controls>
+            <source src="./musics/Ayra_Starr_-_Away_(Official_Music_Video)(128k).mp3" type="audio/mpeg">
+                Your browser does not support the audio element
+            </audio>
+        <p>Ayra_Starr_-_Away_(Official_Music_Audio)(128k)</p><br><br><br>
+        
+
+    <audio controls>
+            <source src="./musics/Habona_by_Christopher_www_inyaRWANDA.mp3" type="audio/mpeg">
+                Your browser does not support the audio element
+            </audio>
+        <p>Habona_by_Christopher_www_inyaRWANDA(Audio_Audio)(128k)</p><br><br><br>
+        
+   
+
+    <audio controls>
+            <source src="./musics/Ijwi_Ryanjye_-_Healing_Worship_Team.mp3" type="audio/mpeg">
+                Your browser does not support the audio element
+            </audio>
+        <p>Ijwi_Ryanjye_-_Healing_Worship_Team_%5BOfficial_Audio%5D(128k)</p><br><br><br>
+   
+
+    <audio controls>
+            <source src="./musics/Nyagasani_wenyine_ni_we_Rutare_rwanjye_Catholique_RWANDA.mp3" type="audio/mpeg">
+                Your browser does not support the audio element
+            </audio>
+        <p>Nyagasani_wenyine_ni_we_Rutare_rwanjye_-_Padiri_André_NTUNGIYEHE_-_Catholique_RWANDA(128k)</p><br><br><br>
+        
+
+    <audio controls>
+            <source src="./musics/Ruger_-_Girlfriend.mp3" type="audio/mpeg">
+                Your browser does not support the audio element
+            </audio>
+        <p>Ruger_-_Girlfriend_(Official_Audio)(128k)</p><br><br><br>
+        
+   
+    <audio controls>
+            <source src="./musics/Selena_Gomez_-_The_Heart_Wants_What_It_Wants.mp3" type="audio/mpeg">
+                Your browser does not support the audio element
+            </audio>
+        <p>Selena_Gomez_-_The_Heart_Wants_What_It_Wants_(Official_Video)(128k)</p><br><br><br>
+   
+
+    <audio controls>
+            <source src="./musics/UMUKUNZI_BY_BIGIZI_GENTIL.mp3" type="audio/mpeg">
+                Your browser does not support the audio element
+            </audio>
+        <p>UMUKUNZI_BY_BIGIZI_GENTIL(audio)</p><br><br>
+
+        </section>
+    
+<div><footer style="background-color:violet;text-align: center;width:100%;height:auto; color: white;font-size: 20px;"><p>UR CBE B BIT &copy; 2024 &reg; This website displays videos</p></footer></div>
+
+<script>
+    var audios = [
+        "./musics/Agatunda (Music_Audio).mp3",
+        "./musics/Ayra_Starr_-_Away_(Official_Music_Video)(128k).mp3",
+        "./musics/Habona_by_Christopher_www_inyaRWANDA.mp3",
+        "./musics/Ijwi_Ryanjye_-_Healing_Worship_Team.mp3",
+        "./musics/Nyagasani_wenyine_ni_we_Rutare_rwanjye_Catholique_RWANDA.mp3",
+        "./musics/Ruger_-_Girlfriend.mp3",
+        "./musics/Selena_Gomez_-_The_Heart_Wants_What_It_Wants.mp3",
+        "./musics/UMUKUNZI_BY_BIGIZI_GENTIL.mp3",
+    ];
+    var currentAudioIndex = 0;
+    var audioPlayer = document.querySelector('audio');
+
+    function togglePlayPause() {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+        } else {
+            audioPlayer.pause();
+        }
+    }
+
+    function nextAudio() {
+        currentAudioIndex = (currentAudioIndex + 1) % audios.length;
+        audioPlayer.src = audios[currentAudioIndex];
+        audioPlayer.play();
+    }
+
+    function previousAudio() {
+        currentAudioIndex = (currentAudioIndex - 1 + audios.length) % audios.length;
+        audioPlayer.src = audios[currentAudioIndex];
+        audioPlayer.play();
+    }
+</script>
+
+</body>
+</html>
